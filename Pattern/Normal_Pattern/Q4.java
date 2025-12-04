@@ -1,4 +1,4 @@
-//PAttern with Ladder
+//PAttern Number Ladder
 class main {
     public static void main(String[] args) {
 	     int n=5;
