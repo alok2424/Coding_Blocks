@@ -1,6 +1,6 @@
 class Fibo{
     public static void main(String[] args){
-        int n = 0;
+        int n = 12;
         int a = 0;
         int b = 1;
 
