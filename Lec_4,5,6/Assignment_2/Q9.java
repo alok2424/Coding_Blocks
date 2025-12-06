@@ -1,6 +1,5 @@
 //GCD
 class GCD {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int divisor = 60;
