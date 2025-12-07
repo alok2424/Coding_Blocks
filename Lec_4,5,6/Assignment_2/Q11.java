@@ -6,10 +6,8 @@ class Main{
         System.out.println("enter the num: ");
         int N = sc.nextInt();
         String s = String.valueOf(N);
-
         s = s.replace('0','5');
         N = Integer.parseInt(s);
         System.out.println(N);
-        
     }
 }

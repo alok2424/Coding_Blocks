@@ -1,19 +1,20 @@
 //Inverse of a num
-class Main{
-
-    public static int inverse(int n) {
-        int position = 1;
-        int inverse = 0;
-
+import java.util.*;
+class Inverse_of_No {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int num=0;
+        int i=1;
         while (n > 0) {
-            int digit = n % 10;  // current digit
-            // place "position" at index = digit
-            inverse += position * (int)Math.pow(10, digit - 1);
+                int rem=n%10;
+                int place=rem-1;
 
-            position++;
-            n /= 10;
+                num= (int) (num+i*Math.pow(10,place));
+                n=n/10;
+            i++;
         }
+        System.out.println(num);
 
-        return inverse;
     }
 }

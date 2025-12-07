@@ -1,6 +1,6 @@
 //Reverse Num
 import java.util.*;
-class Main {
+class Main{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
          System.out.println("enter the num ");
@@ -11,7 +11,6 @@ class Main {
              rev = rev * 10 + rem;
              num = num /10;
          }
-       System.out.println("Reverse of num " + rev);
-        
+       System.out.println("Reverse of num " + rev); 
     }
 }

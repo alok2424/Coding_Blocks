@@ -7,7 +7,7 @@ class Main {
 
         int sumOdd = 0;
         int sumEven = 0;
-        int pos = 1;
+        int pos = 1;//uint place
 
         while (n > 0) {
             int digit = n % 10;

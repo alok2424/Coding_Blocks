@@ -2,38 +2,28 @@
 import java.util.*;
 class Main{
 
-    public static boolean isArmstrong(int num) {
-        int original = num;
+    public static boolean Is_Armstrong(int n) {
+		int cod = countofdigit(n);
+		int sum = 0;
+		int temp=n;
+		while (n > 0) {
+			int rem = n % 10;
+			sum = (int) (sum + Math.pow(rem, cod));
+			n = n / 10;
+		}
+		if (sum == temp) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
-        // count digits
-        int digits = 0;
-        int temp = num;
-        while (temp > 0) {
-            digits++;
-            temp /= 10;
-        }
-
-        // compute sum of digits^digits
-        int sum = 0;
-        temp = num;
-        while (temp > 0) {
-            int d = temp % 10;
-            sum += Math.pow(d, digits);
-            temp /= 10;
-        }
-
-        return sum == original;
-    }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int n = sc.nextInt();
-
-        if (isArmstrong(n)) {
-            System.out.println("true");
-        } else {
-            System.out.println("false");
-        }
-    }
+	public static int countofdigit(int n) {
+		int c = 0;
+		while (n > 0) {
+			c++;
+			n = n / 10;
+		}
+		return c;
+	}
 }

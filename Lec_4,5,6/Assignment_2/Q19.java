@@ -1,30 +1,28 @@
-//Chewbacca and Number
+//Chewbacca
 import java.util.*;
-class Main{
+class Chewbacca{
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        String x = sc.next();  // take as string because up to 10^18
-        StringBuilder result = new StringBuilder();
-
-        for (int i = 0; i < x.length(); i++) {
-            int digit = x.charAt(i) - '0';
-            int inverted = 9 - digit;
-
-            int chosen;
-
-            // First digit cannot become 0
-            if (i == 0 && digit == 9) {
-                chosen = 9;
-            } else if (i == 0 && inverted == 0) {
-                chosen = digit;   // avoid leading zero
-            } else {
-                chosen = Math.min(digit, inverted);
+        Scanner sc=new Scanner(System.in);
+        long n=sc.nextLong();
+        long newNo=0;
+        long val=1;
+        while (n>9) {
+            long rem = n % 10;
+            //if first digit is greater than 5
+            if(rem>=5){
+                rem=9-rem;
             }
-
-            result.append(chosen);
+            newNo=newNo+rem*val;
+            val=val*10;
+            n=n/10;
         }
-
-        System.out.println(result.toString());
+        //special case
+        if(n==9||n<5){
+            newNo=newNo+n*val;
+        }
+        else {
+            newNo=newNo+(9-n)*val;
+        } 
+        System.out.println(newNo);
     }
 }
