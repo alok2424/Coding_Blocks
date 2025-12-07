@@ -1,19 +1,19 @@
-//Print_Arm_Strong_Num
+//isArmStrong
 import java.util.*;
 class Main{
 
     public static boolean isArmstrong(int num) {
         int original = num;
-        int digits = 0;
 
-        // Count digits
+        // count digits
+        int digits = 0;
         int temp = num;
         while (temp > 0) {
             digits++;
             temp /= 10;
         }
 
-        // Calculate sum of digits^digits
+        // compute sum of digits^digits
         int sum = 0;
         temp = num;
         while (temp > 0) {
@@ -24,16 +24,16 @@ class Main{
 
         return sum == original;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int N1 = sc.nextInt();
-        int N2 = sc.nextInt();
+        int n = sc.nextInt();
 
-        for (int i = N1; i <= N2; i++) {
-            if (isArmstrong(i)) {
-                System.out.println(i);
-            }
+        if (isArmstrong(n)) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
         }
     }
 }
