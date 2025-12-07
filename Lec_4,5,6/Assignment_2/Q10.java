@@ -1,6 +1,5 @@
-import java.util.*;
 
-class Main {
+class Main{
 
     public static int inverse(int n) {
         int position = 1;
