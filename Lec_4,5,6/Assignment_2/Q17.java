@@ -1,5 +1,4 @@
 //Print-Series
-
 import java.util.*;
 class Main {
 

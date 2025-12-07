@@ -1,3 +1,4 @@
+//Sum_of_Odd_Placed_and_Even_Placed_Digits
 import java.util.*;
 class Main {
     public static void main(String[] args) {

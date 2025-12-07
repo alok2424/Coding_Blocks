@@ -1,4 +1,4 @@
-
+//Inverse of a num
 class Main{
 
     public static int inverse(int n) {
