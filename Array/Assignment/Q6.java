@@ -10,7 +10,6 @@ class Main{
              arr[i][j] = sc.nextInt();
             } 
         }
-
         //for every array
         int ans = 0;
         for(int i = 0;i<N;i++){
