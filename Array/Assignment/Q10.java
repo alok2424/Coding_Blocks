@@ -1,7 +1,7 @@
 //MAximum Circule SUm
 import java.util.*;
 
-class Main{
+class Main {
 
     public static int MaximumSum(int[] arr) {
         int ans = Integer.MIN_VALUE;
