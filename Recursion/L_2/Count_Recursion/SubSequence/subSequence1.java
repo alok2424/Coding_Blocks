@@ -5,7 +5,6 @@ class Main{
      System.out.println("\n"+subSequence(s, ""));
     } 
 
-    
     public static int subSequence(String ques, String ans){
         //base condition
         if(ques.length() == 0){

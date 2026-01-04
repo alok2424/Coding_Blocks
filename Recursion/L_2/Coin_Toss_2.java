@@ -6,14 +6,18 @@ class Main{
         String ans = "";
         coinToss2(n,ans);
     }
-     public static void coinToss2(int n, String ans){
+     public static int coinToss2(int n, String ans){
         if(n == 0){
             System.out.println(ans);
-            return;
+            return 1;
         }
+        int f = 0;
+        //left recursion call
         if(ans.length() == 0 || ans.charAt(ans.length() - 1) != 'H'){
-          coinToss2(n-1, ans+"H");//first blank 
+          f= f + coinToss2(n-1, ans+"H");//first blank 
         }
-        coinToss2(n-1, ans+"T");
+        //right recursion call
+        int s = coinToss2(n-1, ans+"T");
+        return f+s;
       }
 }

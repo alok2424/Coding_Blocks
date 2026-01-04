@@ -10,7 +10,9 @@ class Main{
             return;
         }
         char ch = s.charAt(0);
+        //left recursion call
         subSequence(s.substring(1), ans);//first blank
+        //right recrusion call
         subSequence(s.substring(1), ans+ch);
       }
 }

@@ -5,12 +5,13 @@ class Main{
         String ans = "";
         coinToss(n,ans);
     }
-     public static void coinToss(int n, String ans){
+     public static int coinToss(int n, String ans){
         if(n == 0){
             System.out.println(ans);
-            return;
+            return 1;
         }
-        coinToss(n-1, ans+"H");//first blank
-        coinToss(n-1, ans+"T");
+        int f = coinToss(n-1, ans+"H");//left recursion call
+        int s = coinToss(n-1, ans+"T");//right recursion call
+        return f+s;
       }
 }
