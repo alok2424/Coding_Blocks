@@ -1,0 +1,45 @@
+🔑 Hint:
+
+For each cook, you need to calculate how many parathas that cook can make within mid minutes, then sum for all cooks.
+
+2️⃣ Think per cook (VERY IMPORTANT)
+
+For a cook with rank R:
+
+Time taken for:
+
+1st parantha → R
+
+2nd parantha → 2R
+
+3rd parantha → 3R
+
+...
+
+k-th parantha → kR
+
+So total time for k paranthas:
+
+R * (1 + 2 + 3 + ... + k)
+= R * k * (k + 1) / 2
+
+❓ Question to ask yourself:
+
+“What is the maximum k such that
+R * k * (k + 1) / 2 <= mid ?”
+
+You do NOT need formula inversion — just keep adding until time exceeds mid.
+
+3️⃣ Pseudothinking (not code)
+
+For each cook:
+
+time = 0
+count = 1
+while(time + count * R <= mid):
+    time += count * R
+    curr_paratha++
+    count++
+
+
+⚠️ Stop when time exceeds mid

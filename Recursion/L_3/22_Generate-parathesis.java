@@ -16,8 +16,8 @@ class generate_Parenthesis{
         }
         if(open > n || closed > open){
             return;
-        }
-        Parenthesis(n,ans+"(", open+1,closed,ll);//ll
-        Parenthesis(n, ans+")", open, closed+1,ll);
+        }   
+        Parenthesis(n,ans+"(", open+1,closed,ll);//left recursion call
+        Parenthesis(n, ans+")", open, closed+1,ll);//right recursion call
     }
 }

@@ -1,5 +1,5 @@
 import java.util.*;
-public class Main {
+class Main {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -15,6 +15,8 @@ public class Main {
         // rotate 90 degree anticlockwise
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n; j++){
+                int I = //new mat
+                int J = //new mat
                 new_mat[n - 1 - j][i] = mat[i][j];
             }
         }

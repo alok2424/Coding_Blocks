@@ -34,9 +34,10 @@ class AgreesiveCow{
         int pos = stall[0];//fixed method
         int cow = 1;
         for(int i =1; i<stall.length;i++){
-            if(stall[i] - pos >= mid){
-                cow++;
-                pos = stall[i];
+            if(stall[i] - pos >= mid){//stall[i] = abhi jis stall pe hai
+            //pos = previous stall
+                cow++;//kitne cow baith gye
+                pos = stall[i];//update kar rahe hau previous stall ko
             }
             if(cow == noc){
                 return true;
