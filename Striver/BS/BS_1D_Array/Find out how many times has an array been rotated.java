@@ -1,0 +1,1 @@
+//return the index of min-value 

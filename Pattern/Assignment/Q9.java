@@ -1,14 +1,12 @@
 //Pattern Triangle
-
 class Main {
     public static void main(String[] args) {
        int n = 4;
        int row = 1;
        int num = 1;
        int space = n-1;
-
        while(row <= n){
-          //space
+         //space
          int j = 1;
          while(j <= space){
              System.out.print("  ");
@@ -25,8 +23,7 @@ class Main {
          while(k >= num){
              System.out.print(k+" ");
              k--;
-         }
-  
+         }  
          //next page
          num++;
          space--;
