@@ -21,7 +21,7 @@ class Solution {
             }
 
             if (sum <= threshold) {
-                ans = mid;        // valid divisor
+                ans = mid;       
                 high = mid - 1;   // try smaller
             } else {
                 low = mid + 1;    // need larger divisor
