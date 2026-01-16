@@ -1,3 +1,5 @@
+class Main{
+
 public static boolean isPalindrom(String s) {
 		int i = 0;
 		int j = s.length() - 1;
@@ -10,3 +12,4 @@ public static boolean isPalindrom(String s) {
 		}
 		return true;
 	}
+}
