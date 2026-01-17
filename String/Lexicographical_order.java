@@ -9,8 +9,6 @@ class Lexicographical_Order {
 		String s4="ankita";
 		System.out.println(s3.compareTo(s4));
 		System.out.println(compareTo(s1, s2));
-		
-
 	}
 	public static int compareTo(String s1, String s2) {
 		if(s1==s2) {

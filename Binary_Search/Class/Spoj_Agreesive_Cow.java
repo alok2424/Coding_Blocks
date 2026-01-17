@@ -13,7 +13,7 @@ class AgreesiveCow{
         stall[i] = sc.nextInt();
      }
      //sort the array
-     Arrays.sort(stall);
+     Arrays.sort(stall);//bcz stalls are in straight line
     }
     public static int LargestMinDis(int[] stall,int noc){
         int low = 1;
@@ -33,7 +33,7 @@ class AgreesiveCow{
     public static boolean isitpossible(int[] stall, int noc,int mid){
         int pos = stall[0];//fixed method
         int cow = 1;
-        for(int i =1; i<stall.length;i++){
+        for(int i = 1; i<stall.length;i++){//starting from stall 2nd
             if(stall[i] - pos >= mid){//stall[i] = abhi jis stall pe hai
             //pos = previous stall
                 cow++;//kitne cow baith gye

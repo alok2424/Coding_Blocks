@@ -4,7 +4,7 @@ class Main {
         Scanner sc = new Scanner(System.in);
         int P = sc.nextInt(); // no of paratha
         int L = sc.nextInt(); // no of cook
-        int[] R = new int[L];
+        int[] R = new int[L];//rank array
         for (int i = 0; i < L; i++) {
             R[i] = sc.nextInt(); // rank of cook
         }
