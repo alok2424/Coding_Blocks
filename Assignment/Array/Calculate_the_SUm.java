@@ -1,36 +1,37 @@
 import java.util.*;
+class Main {
 
-public class Main {
-    static final long MOD = 1_000_000_007;
+   	public static int[] Update_Array(int[] arr, int x) {
+		int [] a= new int [arr.length];
+		for (int i = 0; i < a.length; i++) {
+			int j=i-x;
+			if(j<0) {
+				j+=arr.length;
+			}
+			a[i]=arr[i]+arr[j];
+		}
+		return a;
 
-    static long power(long base, long exp) {
-        long result = 1;
-        while (exp > 0) {
-            if ((exp & 1) == 1)
-                result = (result * base) % MOD;
-            base = (base * base) % MOD;
-            exp >>= 1;
-        }
-        return result;
-    }
+	}
 
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+		int q = sc.nextInt();
+		while (q-- > 0) {
+			int x = sc.nextInt();
+			arr = Update_Array(arr, x);
 
-        int N = sc.nextInt();
-        long sum = 0;
-
-        for (int i = 0; i < N; i++) {
-            sum = (sum + sc.nextInt()) % MOD;
-        }
-
-        int Q = sc.nextInt();
-
-        for (int i = 0; i < Q; i++) {
-            sc.nextInt();
-        }
-
-        long result = (sum * power(2, Q)) % MOD;
-        System.out.println(result);
+		}
+		long ans = 0;
+		int mod = 1000_000_007;
+		for (int i = 0; i < arr.length; i++) {
+			ans = (ans + arr[i]) % mod;
+		}
+		System.out.println((int) (ans));
     }
 }
