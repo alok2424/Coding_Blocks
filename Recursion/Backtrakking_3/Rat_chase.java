@@ -31,7 +31,7 @@ class Main{
       if(cr==maze.length-1 && cc == maze[0].length-1){
         v = true;
         Display(ans);
-        maze[cr][cc]= 'O';
+        maze[cr][cc]= 'O';//why this step
         ans[cr][cc] = 0;
         return;
       }

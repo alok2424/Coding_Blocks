@@ -15,7 +15,6 @@ class Insertion_Sort {
 		for (int i = 1; i < arr.length; i++) {
 			InsertLastElement(arr,i);
 		}
-
 	}
 
 	public static void InsertLastElement(int[] arr, int i) {
@@ -26,7 +25,7 @@ class Insertion_Sort {
 			arr[j] = item;
 			j--;
 		}
+		arr[j+1] = item;
 		// return j+1 correct index hota
-
 	}
 }

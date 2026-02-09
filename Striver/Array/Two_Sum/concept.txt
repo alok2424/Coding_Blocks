@@ -1,0 +1,3 @@
+In Two Pointer approach, since sorting changes the original indices, we first store each element along with its original index in a 2D array.
+Then we sort the array based on values only, keeping the original indices attached to each value.
+After applying two pointers on the sorted array, we return the stored original indices when we find the target sum.

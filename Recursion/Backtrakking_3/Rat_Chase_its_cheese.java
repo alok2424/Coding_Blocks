@@ -21,7 +21,7 @@ class Main{
       if(cr<0 || cc<0 || cr>= maze.length || cc>=maze.length || maze[cr][cc]=='X'){
         return;
       }
-      maze[cr][cc] = 'X';
+      maze[cr][cc] = 'X';//isVisited
       ans[cr][cc] = 1;
       //check if it was last cell
       if(cr==maze.length-1 && cc == maze[0].length-1){
@@ -41,7 +41,7 @@ class Main{
         Rat_Chases(maze,cr+1,cc,ans);//down
         Rat_Chases(maze,cr,cc+1,ans);//right
         */
-        maze[cr][cc]= 'O';
+        maze[cr][cc]= 'O';//backtrakking step
         ans[cr][cc] = 0;
     }
     public static void Display(int[][] ans){

@@ -17,7 +17,7 @@ class Main{
             if(isPalindrom(s)){
                 ll.add(s);
               Partition(ques.substring(i),ll,ans);
-              ll.remove(ll.size()-1);
+              ll.remove(ll.size()-1);//backtrakking step
             }  
         }
     }

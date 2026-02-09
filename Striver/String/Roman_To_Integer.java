@@ -17,7 +17,7 @@ class Solution {
                 result += curr;
             }
         }
-
+        
         return result;
     }
 }

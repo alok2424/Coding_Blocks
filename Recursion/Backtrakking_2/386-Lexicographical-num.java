@@ -10,7 +10,6 @@ class Main{
         if(curr!= 0){
           System.out.println(curr);
         }
-        
         int i = 0;
         if(curr == 0){
             i = 1;
