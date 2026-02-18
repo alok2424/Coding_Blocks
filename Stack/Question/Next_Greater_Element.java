@@ -15,6 +15,7 @@ class NextGreater{
          while(!st.isEmpty()){
             ans[st.pop()] = -1;
          }
+         //element print kara rahe hai
          for(int i = 0; i<ans.length;i++){
             System.out.println(arr[i]+" "+ ans[i]);
          }
